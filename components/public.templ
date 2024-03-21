@@ -1,7 +1,7 @@
 package components
 
 css Base() {
-  background-color: #f4f4f4;
+  background-color: #e5dada;
     color: #333;
     font-family: Arial;
 }
@@ -19,5 +19,11 @@ templ footerTemplate() {
 }
 
 templ HomePage() {
+    @headerTemplate()
    <h1>Home Page</h1>
+   @footerTemplate()
+}
+
+templ Button() {
+  <button class={Base()}>Click me</button>
 }
