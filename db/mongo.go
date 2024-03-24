@@ -10,11 +10,11 @@ import (
 )
 
 func InitDB() (*mongo.Database, error) {
-	MongoURI, err := utils.GetEnv(MONGO_URI)
+	MongoURI, err := utils.GetEnv("MONGO_URI")
 	if err != nil {
 		log.Fatalf("failed to load MONGOURI")
 	}
-	MongoDB, err := utils.GetEnv(MONGO_DB)
+	MongoDB, err := utils.GetEnv("MONGO_DB")
 	if err != nil {
 		log.Fatalf("failed to load MONGOURI")
 	}
